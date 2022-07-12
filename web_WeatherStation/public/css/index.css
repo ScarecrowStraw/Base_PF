@@ -1,0 +1,155 @@
+
+  
+.bg-info-gradient1{
+  background-color: var(--cui-info, #2982cc);
+  background-image: linear-gradient(
+45deg, var(--cui-info-start, rgb(73, 155, 238)) 0%, var(--cui-info-stop, #0e73c7 100%));
+}
+
+.bg-info-gradient2{
+  background-color: var(--cui-warning, #f6960b);
+  background-image: linear-gradient(
+45deg, var(--cui-warning-start, #f0dc2a) 0%, var(--cui-warning-stop, #f38e01 100%));
+}
+
+.bg-info-gradient3{
+  background-color: var(--cui-danger, #d93737);
+  background-image: linear-gradient(
+45deg, var(--cui-danger-start, #e55353) 0%, var(--cui-danger-stop, #ac2222 100%));
+}
+
+.bg-info-gradient4{
+  background-color: var(--cui-danger, #d93775);
+  background-image: linear-gradient(
+45deg, var(--cui-danger-start, #df9595) 0%, var(--cui-danger-stop, #ac2e62 100%));
+}
+
+.my_card{
+    color: white;
+    font-size: 20px;
+    font-family: var(--cui-font-sans-serif);
+    border-radius: 0.25rem;
+    text-align: center;
+    text-shadow: white;
+}
+
+.index_value{
+    font-size: 60px;
+    
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;  /* Preferred icon size */
+display: inline-block;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+direction: ltr;
+
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
+
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
+
+/* Support for IE. */
+font-feature-settings: 'liga';
+}
+
+.act{
+  background-color:#6967ce !important;
+  color:#fff !important;
+}
+
+/* .CO2{
+  display: none;
+}
+
+.NH3{
+  display: block;
+}
+
+.CH4{
+  display: none;
+}
+.NO2{
+  display: none;
+} */

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+  <head>
+    <meta http-equiv="refresh" content="12000">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Chameleon Admin is a modern Bootstrap 4 webapp &amp; admin dashboard html template with a large number of components, elegant design, clean and organized code.">
+    <meta name="keywords" content="admin template, Chameleon admin template, dashboard template, gradient admin template, responsive admin template, webapp, eCommerce dashboard, analytic dashboard">
+    <meta name="author" content="ThemeSelect">
+    <title>Plan factory</title>
+    <link rel="apple-touch-icon" href="image/1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="image/1.png">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/vendors/css/charts/chartist.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN CHAMELEON  CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/app-lite.css">
+    <!-- END CHAMELEON  CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/pages/dashboard-ecommerce.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/state.css">
+    <link rel="stylesheet" type="text/css" href="css/addp.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <!-- END Custom CSS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript" src="javascript/menuinchart.js"></script>
+    <style>
+      #select-1 {
+        display: block;
+      }
+      
+      #select-2 {
+        display: none;
+      }
+      
+      .option-2 {
+       
+      }
+      </style>
+   
+    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+  </head>
+  <body onload="startTime()" class="vertical-layout vertical-menu 2-columns menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
+      <div class="navbar-wrapper">
+        <div class="navbar-container content">
+          <div class="collapse navbar-collapse show" id="navbar-mobile">
+
+            <ul class="nav navbar-nav mr-auto float-left">
+            </ul>
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown dropdown-user nav-item">
+                  <div id="get_time_current" style="color: white; font-size: 26px;">1</div>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav float-right"> 
+              <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">             <span class="avatar avatar-online"><img src="image/1.png" alt="avatar"><i></i></span></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online"><img src="image/img.jpg" alt="avatar"><span class="user-name text-bold-700 ml-1">Nam</span></span></a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-user"></i> Edit Profile</a><a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a><a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a><a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-power"></i> Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+<div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true" data-img="theme-assets/images/backgrounds/02.jpg">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">       
+          <li class="nav-item mr-auto"><a class="navbar-brand" href="#"><img class="brand-logo" alt="Chameleon admin logo" src="theme-assets/images/logo/2.png"/>
+              <h3 class="brand-text">Plant Factory</h3></a></li>
+          <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+        </ul>
+      </div>
+      <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+          <!-- <li class=""><a href="#"><i class="ft-home"></i><span class="menu-title" data-i18n="">Cai bo xoi</span></a>
+          </li> -->
+          <% names.forEach(function(pj) {%>
+          <li class=""><a href="#"><i class="ft-home"></i><span class="menu-title" data-i18n=""><%= pj.name %></span></a>
+          </li>
+          <!-- <li class=""><a href="#"><i class="fa-solid fa-seedling"></i><span class="menu-title" data-i18n=""><%= pj %></span></a>
+          </li>
+          <li class=""><a href="#"><i class="ft-tree-deciduous" ></i><span class="menu-title" data-i18n=""><%= pj %></span></a>
+          </li>
+          <li class=""><a href="#"><i class="ft-tree-palm"></i><span class="menu-title" data-i18n=""><%= pj %></span></a>
+          </li> -->
+          <% }); %>
+          <!-- <li class="active"><a href="#"><i class="ft-home"></i><span class="menu-title" data-i18n="">Cải Bó Xôi</span></a>
+          </li>
+          <li class=""><a href="#"><i class="fa-solid fa-seedling"></i><span class="menu-title" data-i18n="">Other</span></a>
+          </li>
+          <li class=""><a href="#"><i class="ft-tree-deciduous" ></i><span class="menu-title" data-i18n="">Other</span></a>
+          </li>
+          <li class=""><a href="#"><i class="ft-tree-palm"></i><span class="menu-title" data-i18n="">Other</span></a>
+          </li> -->
+          <li class="">
+            <a href="#" class="state-btn"  onclick="document.getElementById('addproject').style.display='block'">
+              <i class="ft-plus"></i>
+              <span class="menu-title" data-i18n="">New Project</span>
+            </a>
+          </li>
+
+          <!-- <li class=" nav-item"><a href="charts.html"><i class="ft-pie-chart"></i><span class="menu-title" data-i18n="">Charts</span></a>
+          </li> -->
+        </ul>
+      </div>
+      <!-- <a class="btn btn-danger btn-block btn-glow btn-upgrade-pro mx-1" href="https://themeselection.com/products/chameleon-admin-modern-bootstrap-webapp-dashboard-html-template-ui-kit/" target="_blank">Download PRO!</a> -->
+      <div class="navigation-background"></div>
+</div>
+
+    <div class="app-content content" style="position: fixed; top: 70px; left: 260px; right: 0; bottom: 50px; margin-left: 0 !important ; min-height: 0 !important">
+      <div class="content-wrapper" style="padding: 0 !important; height: 100%">
+        <div class="content-wrapper-before"></div>
+        <div class="content-header row"></div>
+        <div class="content-body" style="height: 100%; display: flex; flex-direction: column; ">
+<!-- Chart -->
+
+<label class="switch">
+  <!-- <input type="checkbox" checked>
+  <span class="slider round"></span> -->
+  <div class="btn-group" style="margin-left: 40px;">
+  
+
+    <!-- <a href="#" class="state-btn"  onclick="document.getElementById('id02').style.display='block'"  >
+      <button type="button" class="btn btn-primary" style="margin-right: 5px; margin-left: 5px; width: 130px; height: 40px; border-radius: 3px; color: white; font-size: 13px;">
+         View Setting
+      </button>
+    </a> -->
+ 
+    <button type="button" class="btn btn-primary" style="margin-right: 5px; margin-left: 5px; width: 140px; border-radius: 3px; ">
+      <a href="./download" class="state-btn" style="color: white; font-size: 13px;">Download Data</a>
+    </button>
+  
+  </div>
+</label>
+
+<div class="row match-height" style="padding: 10px 0; height: 25vh; margin: 0 !important">
+      <div class="" style="width: calc(100% / 4); display: flex; align-items: center; height: 100%"> 
+        <div class="card pull-up ecom-card-1 " style="height: 100%;background-color: #262d47;width: 100%; justify-content: center; margin: 0 !important">
+          <div class="card-content ecom-card2" style="height: 100%">
+              <div class="card" style="background-color: #262d47; margin: 0 !important; height: 100%">
+
+                <div id="co2" class="my_card height-200 " style="width:80%; margin-left: 10%;">
+
+                  CO2
+                  <span class="material-icons" style="margin-top: 5px;">water_drop</span>
+                <div id="co2_value" class="index_value">97</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class=""style="width: calc(100% / 4); display: flex; align-items: center; height: 100%" >
+        <div class="card pull-up ecom-card-1 " style="height: 100%;background-color: #262d47;width: 100%;justify-content: center; margin: 0 !important">
+          <div class="card-content ecom-card2" style="height: 100%">
+              <div class="card" style="background-color: #262d47;margin: 0 !important; height: 100%">
+
+                <div id="nh3" class="my_card height-200 " style="width:80%; margin-left: 10%;">
+                  NH3
+                  <span class="material-icons" style="margin-top: 5px;">hub</span>
+                  <div id="nh3_value" class="index_value">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+               
+      </div>
+
+      <div class=""style="width: calc(100% / 4); display: flex; align-items: center; height: 100%">
+        <div class="card pull-up ecom-card-1 " style="height: 100%;background-color: #262d47; width: 100%; justify-content: center;margin: 0 !important">
+          <div class="card-content ecom-card2" style="height: 100%">
+              <div class="card" style="background-color: #262d47; margin: 0 !important; height: 100%">
+                <div id="ch4" class="my_card height-200 " style="width:80%; margin-left: 10%;height: 100%"> 
+                  CH4
+                  <span class="material-icons" style="margin-top: 5px;">thermostat</span>
+                  <div id="ch4_value" class="index_value">37</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <div class=""style="width: calc(100% / 4); display: flex; align-items: center; height: 100%" >
+        <div class="card pull-up ecom-card-1 " style="height: 100%;background-color: #262d47;width: 100%;justify-content: center; margin: 0 !important">
+          <div class="card-content ecom-card2" style="height: 100%">
+              <div class="card" style="background-color: #262d47;margin: 0 !important; height: 100%">
+
+                <div id="no2" class="my_card height-200 " style="width:80%; margin-left: 10%;">
+                  NO2
+                  <span class="material-icons" style="margin-top: 5px;">workspaces</span>
+                  <div id="no2_value" class="index_value">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+               
+      </div>
+</div>
+
+<!-- Chart -->
+<div class="" style="flex: 1;padding: 5vh 10px;">
+    <div class="" style="display: flex; justify-content: center;">
+        <div class="card pull-up ecom-card-1 bg-white" style="height: 100%; margin: 0 !important; width: 70%">
+            <div class="card-content ecom-card2; height: 100%" style="height: 100%; ">
+                <div class="card" style="margin-bottom: 0 !important">
+                  <!-- Create a div where the graph will take place -->
+                  <div  id= "menuchart" class="btn-group " style="margin-left: 40px; height: 20px;">
+                    <button type="button"  value="CO2" class="btn btn-info act menu" style="height: 25px; margin-left: 5px; background-color: #e5e5e7; border-radius: 4px; padding: 2px; font-size: 12px; color: #000;" >C02</button>
+                    <button type="button" value="NH3" class="btn btn-info menu" style="height: 25px; margin-left: 5px; background-color: #efeff0;  border-radius: 4px; padding: 2px; font-size: 12px; color: #000" >NH3</button>
+                    <button type="button"  value="CH4" class="btn btn-info" style="height: 25px; margin-left: 5px; background-color: #efeff0; border-radius: 4px; padding: 2px;font-size: 12px; color: #000" >CH4</button>
+                    <button type="button"  value="NO2" class="btn btn-info" style="height: 25px; margin-left: 5px; background-color: #efeff0; border-radius: 4px;padding: 2px;font-size: 12px; color: #000" >NO2</button>
+                    
+                    <!-- <button type="button" class="btn btn-primary" style="margin-right: 5px; margin-left: 5px; width: 130px; height: 40px; border-radius: 3px;">
+                      <a href="#" class="state-btn"  onclick="document.getElementById('id01').style.display='block'"  style="color: white; font-size: 13px;">Control Pump</a>
+                    </button>
+                 
+                
+                    <button type="button" class="btn btn-primary" style="margin-right: 5px; margin-left: 5px; width: 130px; height: 40px; border-radius: 3px;">
+                      <a href="#" class="state-btn"  onclick="document.getElementById('id02').style.display='block'"  style="color: white; font-size: 13px;">Control CO2</a>
+                    </button>
+                 
+                 
+                    <button type="button" class="btn btn-primary" style="margin-right: 5px; margin-left: 5px; width: 140px; border-radius: 3px; background-color: #12af7a;">
+                      <a href="./download" class="state-btn" style="color: white; font-size: 13px;">Download Data</a>
+                    </button>
+                  
+                     -->
+                   
+                   
+                  </div>
+
+                  <canvas id="chart1" class= "CO2" style="display: block;"></canvas>
+                  <canvas id="chart2" class= "NH3" style="display: none; "></canvas>
+                  <canvas id="chart3" class= "CH4" style="display: none; "></canvas>
+                  <canvas id="chart4" class= "NO2" style="display: none; "></canvas>
+                  
+
+                  <!-- <canvas id="chart2" style="display: block;" ></canvas> -->
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="card pull-up ecom-card-1 bg-white">
+            <div class="card-content ecom-card2 height-180">
+                <div class="card">
+                  <canvas id="chart2" ></canvas>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="" style="width: 50%; padding: 0 2%">
+        <div class="card pull-up ecom-card-1 bg-white" style="height: 100%;margin: 0 !important">
+            <div class="card-content ecom-card2" style="height: 100%">
+                <div class="card" style="margin-bottom: 0 !important">
+                  
+                  <canvas id="chart3" ></canvas>
+                 </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!--/ eCommerce statistic -->
+
+<!-- Statistics -->
+      <div class="row match-height">
+          <div class="col-xl-4 col-lg-12">
+          </div>
+          <div class="col-xl-4 col-lg-12">
+          </div>
+
+          <div class="col-xl-4 col-lg-12">
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ Statistics -->
+        </div>
+      </div>
+
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow" style="height: 50px ;position: fixed; left: 260px; right: 0; bottom: 0; margin-left : 0 !important">
+      <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2" ><span class="float-md-left d-block d-md-inline-block">2022  &copy; Copyright <a class="text-bold-800 grey darken-2" href="http://fit.uet.vnu.edu.vn/gioi-thieu/cac-bo-mon/" target="_blank">Bui Van Nam</a></span>
+        <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
+          <!-- <li class="list-inline-item"><a class="my-NO2
+      </div>
+    </footer>
+
+
+    <!-- state -->
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="#" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        
+        <div class="container">
+          <h3 style="text-align: center;">Control Pump</h3>
+          <label for="userName" style="margin-top:3%;"><b>time start</b></label>
+          <!-- <input type="text" placeholder="Giờ bắt đầu" name="userName" required> -->
+          <input type="time" id="appt" name="time_start"
+           min="09:00" max="18:00" style="width: 150px;" required>
+          <br>
+          <label for="howlong"><b>time execution (minutes)</b></label>
+          <input type="number" placeholder="time execution" name="execution_time" style="width: 150px" required>
+          <br>
+          <label for="repeat"><b>repeat</b></label>
+          <select class="example" name="repeat" style="width: 150px; height: 30px;" required>
+            <option name="table1" value="1">days</option>
+            <option name="table2" value="2">weeks</option>
+            <option name="table3" value="3">months</option>
+          </select>
+
+          <!-- <label for="passWord"><b>Lặp lại</b></label><br>
+          <input type="checkbox" id="days" name="days" value="days">
+          <label for="days">Hằng ngày</label><br>
+          <input type="checkbox" id="weeks" name="weeks" value="weeks">
+          <label for="weeks">Hằng tuần</label><br> 
+          <input type="checkbox" id="months" name="months" value="months">
+          <label for="months">Hằng tháng</label><br><br> -->
+
+          <button type="submit">Set up</button>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+        </div>
+        <!-- <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span> 
+        </div> -->
+      </form>
+    </div>
+
+     <!-- valve -->
+     <div id="id02" class="modal">
+      <form class="modal-content animate" action="" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        
+        <div class="container">
+          <h3 style="text-align: center;">Control CO2</h3>
+          <label for="levelCO2"><b>Value CO2 (ppm)</b></label> <br>
+          <input type="text" placeholder="Value CO2" name="level_co2" required> <br>
+          <label for="time_execution"><b>Time Execution (minutes)</b></label> <br>
+          <input type="text" placeholder="Time Execution" name="time_execution" required> <br>
+
+          <button type="submit">Set Up</button>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+        </div>
+
+        <!-- <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div> -->
+      </form>
+    </div>
+
+
+      <!-- addproject -->
+      <div id="addproject" class="modal" style="display: block;">
+        <form class="modal-content animate" action="#" method="post">
+          <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('addproject').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+            <span onclick="window.location.href ='http://localhost:3000/planfactory/dashboard/Other'" class="close" title="Close Modal">&times;</span>
+          </div>
+
+          <div class="container">
+            <label for="name_project"><b>Project Name</b></label> 
+            <input style="width: 50% ;height: 40px;" type="text" placeholder="Project Name" name="name_project" required> <br>
+            <label for="Object"><b>Object</b></label> 
+            <input style="width: 50% ;height: 40px;" type="text" placeholder="Object" name="Object" required> <br>
+            <label for="Description"><b>Description</b></label> 
+            <input style="width: 50% ;height: 40px;" type="text" placeholder="Description" name="Description" required> <br>
+            <label> <b>Enter config</b> </label>
+            <select name="config" id="ddlViewBy" style="width: 50% ;height: 40px; border-radius: 5px; margin-top: 5px;" placeholder="Description">
+              <option value="1" class="option" selected="selected">config 1</option>
+              <option value="2" class="option">config 2</option>
+            </select> <br>
+            <br>
+            <div id="select-1">
+              <label for="muc_co2">1st Stage</label> <br>
+              <input type="date" id="myDate" value="2022-02-22" name="gd1_from"> to
+              <input type="date" id="myDate" value="2024-03-22" name="gd1_to"> 
+              <input style="height: 30px; width: 170px;" type="text" placeholder="value co2 (ppm)" name="gd1_muc" required> <br>
+              <label for="muc_co2">2nd Stage</label> <br>
+              <input type="date" id="myDate" value="2022-03-23" name="gd2_from"> to
+              <input type="date" id="myDate" value="2022-04-23" name="gd2_to"> 
+              <input style="height: 30px; width: 170px;" type="text" placeholder="value co2 (ppm)" name="gd2_muc" required> <br>
+              <label for="muc_co2">3rd Stage</label> <br>
+              <input type="date" id="myDate" value="2022-04-24" name="gd3_from">  to
+              <input type="date" id="myDate" value="2022-05-24" name="gd3_to"> 
+              <input style="height: 30px; width: 170px;" type="text" placeholder="value co2 (ppm)" name="gd3_muc" required> <br>
+            </div>
+
+            <div id="select-2">
+              <h3 style="text-align: center;">Control Pump</h3>
+              <label for="userName" style="margin-top:3%;"><b>time start</b></label>
+              <!-- <input type="text" placeholder="Giờ bắt đầu" name="userName" required> -->
+              <input type="time" id="appt" name="time_start"
+               min="09:00" max="18:00" style="width: 150px;" >
+              <br>
+              <label for="howlong"><b>time execution (minutes)</b></label>
+              <input type="number" placeholder="time execution" name="execution_time" style="width: 150px" >
+              <br>
+              <label for="repeat"><b>repeat</b></label>
+              <select class="example" name="repeat" style="width: 150px; height: 30px;" >
+                <option name="table1" value="1">days</option>
+                <option name="table2" value="2">weeks</option>
+                <option name="table3" value="3">months</option>
+              </select>
+            </div>
+            <button type="submit">Add Project</button>
+          </div>
+        </form>
+      </div>
+
+    <script>
+      // Get the modal login
+      var modal = document.getElementById('id01');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+
+    <script>
+    // Get the modal login
+    var modal2 = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+      modal2.style.display = "none";
+    }
+    }
+    </script>
+
+    <script>
+    // Get the modal login
+    var modal = document.getElementById('addproject');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <script src="theme-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="theme-assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN CHAMELEON  JS-->
+    <script src="theme-assets/js/core/app-menu-lite.js" type="text/javascript"></script>
+    <script src="theme-assets/js/core/app-lite.js" type="text/javascript"></script>
+    <!-- END CHAMELEON  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="theme-assets/js/scripts/pages/dashboard-lite.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" src="javascript/chartpf.js"></script> -->
+    <script type="text/javascript" src="javascript/chartpf2.js"></script>
+    <!-- <script type="text/javascript" src="javascript/chartpf24.js"></script> -->
+    <script type="text/javascript" src="javascript/index.js"></script>
+    <script type="text/javascript" src="api/index.js"></script>
+    <script type="text/javascript" src="api/planf.js"></script>
+    <script type="text/javascript" src="javascript/config.js"></script>
+  
+    <!-- END PAGE LEVEL JS-->
+    <script>
+      const select = document.getElementById("ddlViewBy");
+
+var select1 = document.getElementById("select-1");
+var select2 = document.getElementById("select-2");
+
+var option = document.querySelectorAll(".option");
+console.log(option);
+
+select.addEventListener("change", (event) => {
+  console.log(event.target.value); // 👉️ get selected VALUE
+  if (event.target.value == 1) {
+    console.log("111");
+
+    //     Set value to input
+    select1.value = event.target.value;
+
+    //     Set another option = none
+    select1.style.display = "none";
+    select2.style.display = "none";
+
+    //     Open input
+    select1.style.display = "block";
+  }
+
+  if (event.target.value == 2) {
+    console.log("222");
+
+    //     Set another option = none
+    select1.style.display = "none";
+    select2.style.display = "none";
+
+    //     Open input
+    select2.style.display = "block";
+  }
+});
+
+      </script>
+
+   
+
+
+  </body>
+</html>

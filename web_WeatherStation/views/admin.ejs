@@ -1,0 +1,182 @@
+<!doctype html>
+<!-- 
+* Bootstrap Simple Admin Template
+* Version: 2.1
+* Author: Alexis Luna
+* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>admin</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="css/state.css" rel="stylesheet">
+    <style>
+        .sorting::before{
+            content: none !important;
+        }
+        .sorting::after{
+            content: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- sidebar navigation component -->
+      
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu" aria-labelledby="nav1">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i> Access Logs</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back ups</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i> Updates</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i> Roles</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i> <span>Nam Bui</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>Users
+                            <a href="#" class="btn btn-sm btn-outline-primary float-end state-btn" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-shield"></i> Add User</a>
+                        </h3>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-body">
+                            <table width="100%" class="table table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Permission</th>
+                                        <th>Password</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="data_users"> 
+                                    <!-- <tr> -->
+                                        <!-- <td class="text-end">
+                                            <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-end">
+                                          <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                          <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                                      </td> -->
+                                  <!-- </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- state -->
+     <div id="id01" class="modal">
+        <form class="modal-content animate" action="http://localhost:3000/admin" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+          
+          <div class="container">
+            <label for="Name"><b>Name</b></label>
+            <input type="text" placeholder="Name" id="Name" name="Name" style="width: 250px; height: 40px;" required>
+            <br>
+
+            <label for="Email"><b>Email</b></label>
+            <input type="text" placeholder="Email" id="Email" name="Email" style="width: 250px; height: 40px;" required>
+            <br>
+
+            <label for="Phone"><b>Phone</b></label>
+            <input type="text" placeholder="Phone" id="Phone" name="Phone" style="width: 250px; height: 40px;" required>
+            <br>
+
+            <label for="Permission"><b>Permission</b></label>
+            <input type="text" placeholder="Permission" id="Permission" name="Permission" style="width: 250px;height: 40px;" required>
+            <br>
+
+            <label for="Password"><b>Password</b></label>
+            <input type="password" placeholder="Password" id="Password" name="Password" style="width: 250px;height: 40px;" required>
+            <br>
+ 
+  
+            <button type="submit">Add User</button>
+            <!-- <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> -->
+          </div>
+      
+          <!-- <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span> 
+          </div> -->
+        </form>
+      </div>
+
+      <script>
+        // Get the modal login
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/datatables/datatables.min.js"></script>
+    <script src="assets/js/initiate-datatables.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="api/users.js"></script>
+</body>
+
+</html>
